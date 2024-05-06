@@ -7,6 +7,7 @@ import { Constants } from "../Common/Constants";
 
 const ID = "simplepostalcode";
 const DISPLAY = "Postal Code";
+const DEFAULT_DESCRIPTION = "Please input the first three characters of your postal code in the format like V9E.";
 
 export default class Component extends (ParentComponent as any) {
   static schema(...extend) {
@@ -15,6 +16,7 @@ export default class Component extends (ParentComponent as any) {
         type: ID,
         label: DISPLAY,
         key: ID,
+        description: DEFAULT_DESCRIPTION,
         inputType: "postalcode",
         inputFormat: "plain",
         inputMask: "***",
