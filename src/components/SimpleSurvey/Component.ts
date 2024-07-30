@@ -7,6 +7,7 @@ import { Constants } from "../Common/Constants";
 
 const ID = "simplesurvey";
 const DISPLAY = "Likert";
+const DEFAULT_DESCRIPTION = "Please select the option that best applies.";
 
 export default class Component extends (ParentComponent as any) {
   static schema(...extend) {
@@ -15,6 +16,7 @@ export default class Component extends (ParentComponent as any) {
         type: ID,
         label: DISPLAY,
         key: ID,
+        description: DEFAULT_DESCRIPTION,
       },
       ...extend
     );

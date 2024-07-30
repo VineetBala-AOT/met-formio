@@ -7,6 +7,7 @@ import { Constants } from '../Common/Constants';
 
 const ID = 'simpletextfield';
 const DISPLAY = 'Single Line Answer';
+const DEFAULT_DESCRIPTION = "Please do not include any personally identifiable information about yourself or others in your responses.";
 
 export default class Component extends (ParentComponent as any) {
     static schema(...extend) {
@@ -16,6 +17,7 @@ export default class Component extends (ParentComponent as any) {
                 type: ID,
                 label: DISPLAY,
                 key: ID,
+                description: DEFAULT_DESCRIPTION,
                 mask: false,
                 inputType: 'text',
                 inputFormat: 'plain',

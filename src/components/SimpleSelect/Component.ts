@@ -7,6 +7,7 @@ import { Constants } from "../Common/Constants";
 
 const ID = "simpleselect";
 const DISPLAY = "Drop-down";
+const DEFAULT_DESCRIPTION = "Choose one of the answers above.";
 
 export default class Component extends (ParentComponent as any) {
   static schema(...extend) {
@@ -15,6 +16,7 @@ export default class Component extends (ParentComponent as any) {
         type: ID,
         label: DISPLAY,
         key: ID,
+        description: DEFAULT_DESCRIPTION,
         dataSrc: "values",
         dataType: "auto",
         widget: "choicesjs",
